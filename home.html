@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--Author:Savneet(C0777993)
+    Added on :09-11-2020-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Travel India</title>
+</head>
+
+<body>
+    <!--Header section-->
+    <div id="container">
+        <header>
+            <div class="w3-container">
+               
+                <h2 class="alignright">
+                    The Succulent Haven by Ken</h2>
+            </div>
+        </header>
+        <!--Navigation Section-->
+        <nav>
+            <div class="w3-bar w3-card-4 w3-blue">
+                <a href="index.html" class="w3-bar-item w3-button">Home</a>
+                <a href="gallary.html"class ="w3-bar-item w3-button">Gallary</a>
+                <a href="shop.html" class="w3-bar-item w3-button">Shop</a>
+                <a href="contact.html" class="w3-bar-item w3-button">Contact Us</a>
+            </div>
+        </nav>
+        <!--Main Section-->
+        <main>
+            <div class="w3-content w3-section" style="max-width:100%;">
+                <figure>
+                    <img class="mySlides" src="svenja-m-sdP1KLKR6oE-unsplash.jpg" alt="Succulent">
+                    <img class="mySlides" src="janine-robinson-wOh0_bkEyAk-unsplash (1).jpg" alt="Succulent">
+                    <img class="mySlides" src="david-sola-xACeKhoDJLA-unsplash.jpg" alt="Succulent">
+                    <img class="mySlides" src="milada-vigerova-n1Y2tKFvN1Y-unsplash.jpg" alt="Succulent">
+                    <img class="mySlides" src="rigel-mYgBAct9-9A-unsplash.jpg" alt="Succulent">
+                    <img class="mySlides" src="david-sola-xACeKhoDJLA-unsplash.jpg" alt="Succulent">
+                    <img class="mySlides" src="ari-yasunaga-8TYzAdued30-unsplash.jpg" alt="Succulent">
+                    <img class="mySlides" src="hannah-c-8RpP_YwERcU-unsplash.jpg" alt="Succulent">
+                </figure>
+            </div>
+             all.
+            </p>
+
+            <div class="imagecontainer">
+                <figure>
+                    <div class="gallery">
+                        <a href=".html">
+                            <img class="w3-hover-opacity" src="crystal-shaw-d1J56ZSXv4w-unsplash.jpg" alt="foodandcuisine">
+                        </a>
+                        <div class="desc">   </div>
+                    </div>
+
+                    <div class="gallery">
+                        <a href=".html">
+                            <img class="w3-hover-opacity" src="freestocks-EMQlhm12OfI-unsplash.jpg" alt="Museums">
+                        </a>
+                        <div class="desc">    </div>
+                    </div>
+
+                    <div class="gallery">
+                        <a href=".html">
+                            <img class="w3-hover-opacity" src="isabela-kronemberger-MV7sfxz8Jcs-unsplash.jpg" alt="Heritage">
+                        </a>
+                        <div class="desc">    </div>
+                    </div>
+
+                    <div class="gallery">
+                        <a href=".html">
+                            <img class="w3-hover-opacity" src="jacalyn-beales-Eh0rE0K1hA8-unsplash.jpg" alt="Mountains">
+                        </a>
+                        <div class="desc">    </div>
+                    </div>
+                </figure>
+            </div>
+            <div id="visacontainer">
+                <div class="w3-container ">
+                    <figure>
+                        <img class="floatleft w3-circle" src="yousef-espanioly-gW5z3UFAsvM-unsplash.jpg" alt="Mountains">
+
+                    </figure>
+                   
+        <footer>
+            <p>&copy; Copyright 2020 | 
+                The Succulent Haven </p>
+        </footer>
+    </div>
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+            setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+
+</html>
+© 2021 GitHub, Inc.
