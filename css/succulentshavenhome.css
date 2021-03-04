@@ -1,0 +1,156 @@
+
+    #about-us-p {
+        width: 50%;
+        padding: 3em;
+    }
+
+    .about-us-img {
+        align-items: center;
+        width: 50%;
+    }
+
+    #featured h1 {
+        font-size: 50px;
+    }
+    
+
+    .feat-succulent {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .feat-img {
+        height: 250px;
+        width: auto;
+        margin: 2em;
+    }
+
+    .feat-img img {
+        height: 230px;
+    }
+
+    #bestdealcontainer {
+        flex-direction: row;
+        text-align: left;
+        width: 80%;
+    }
+
+    .btnContainer {
+        display: unset;
+        justify-content: unset;
+    }
+
+    #bestdeal h1 {
+        font-size: 28px;
+        line-height: 28px;
+        padding: 1em 0 0 0;
+    }
+    
+    #bestdeal img {
+        padding-right: 2em;
+        height: 250px;
+    }
+    
+    #bestdeal p {
+        padding-bottom: 1em;
+    }
+
+    #offers {
+        background-color: white;
+        padding: 2em;
+    }
+    
+    #offerscontainer {
+        flex-direction: row;
+        width: 90%;
+    }
+
+    .offercolumn {
+        margin: 1em;
+    }    
+    .offercolumn p {
+        font-size: 18px;
+    }
+
+    .offercolumn img {
+        height: 100px;
+    }
+    
+}
+
+/* Media query for desktop layout 895px*/
+@media only screen and (min-width: 1360px) {
+    /* Style for the banner section */
+     #banner {
+        height: 600px;
+    }
+
+    #banner-area{
+        font-size: 70px;
+    }
+
+    .banner-text:first-child {
+        line-height: 50px;
+    }
+
+    .buttonHome {
+        font-size: 25px;
+        width: 140px;
+    }
+
+    /* Style for the about us section */
+    #about-us {
+        display: flex;
+    }
+
+    #about-us-p {
+        width: 70%;
+        font-size: 18px;
+    }
+
+
+    .about-us-img {
+        padding: 1em;
+        width: 30%;
+    }
+
+    .about-us-img img {
+        max-height: 100%;
+    }
+
+    /* Styles for features section */
+    .feat-img {
+        height: 260px;
+    }
+
+    .feat-img img {
+        height: 240px;
+    }
+
+    .feat-img img:hover{
+        transform: scale(1.05);
+        transition: .5s;
+    }
+
+    .featrow {
+        display: flex;
+    }
+
+    #bestdeal {
+        padding: 3em;
+    }
+
+    #bestdealcontainer {
+        width: 50%;
+    }
+
+    #bestdeal h1 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    
+    #bestdeal img {
+        height: 275px;
+    }
+}
