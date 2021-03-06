@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- This page is created by: Jasmeen kaur(C0785546)-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,9 +7,10 @@
     <title>Succulents Haven | Contact Us</title>
     <link rel="stylesheet" href="./css/succulentshaven.css">
     <link rel="stylesheet" href="./css/succulentshavencontactus.css">
+    <script src="./js/succulentshavencontactus.js"></script>
     <link rel=" stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;700&display=swap">
    <link rel="icon" href="./images/home/succulents-haven-icon.png" type="image/gif" sizes="16x16">
-</head>
+</head> 
 <body>
     <nav class="align-justify-center">
         <input type="checkbox" id="resp-menu" >
@@ -54,39 +56,29 @@
                 <div class="text">
                     <h3>Send us a message!</h3>
                 </div>
-                <form>
-                    <table style="width: 100%;">
-                        <tr>
-                        <td><label>Your Name(required)</label>
-                            <input type="text" name="name" required></td>
-                        </tr>
-                        <tr>
-                          <td><label>Your E-mail(required)</label>
-                            <input type="email" name="email" required></td>
-                        </tr>
-                        <tr>
-                            <td><label>Your Number</label>
-                             <input type="number" name="number"></td>
-                        </tr>
-                        <tr>
-                             <td><label>Your Country</label>
-                               <input list="countries">
-                               <datalist id="countries">
-                               <option value="Canada"></option>
-                               <option value="Australia"></option>
-                               <option value="USA"></option>
-                               <option value="India"></option>
-                                </datalist></td>
-                        </tr>
-                        <tr>
-                            <td> <label>Your Message</label>
-                             <textarea name="message"  rows="4"></textarea></td>
-                        </tr>
-                        <tr>
-                            <td><button type="submit">Submit</button></td>
-                        </tr>
-                    </table>
-                </form>
+                <form id="contact_form" name="contact_form"
+                action="join.html" method="get">
+  
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name">
+              <span>*</span><br>
+              <label for="email">Your E-mail:</label>
+              <input type="text" id="email" name="email">
+              <span>*</span><br>
+              <label for="number">Your Number:</label>
+              <input type="text" id="number" name="number">
+              <span>*</span><br>
+              <label for="country">Your Country:</label>
+              <input type="text" id="country" name="country">
+              <span>*</span><br>
+              <label for="Message">Your Message:</label>
+              <input type="text" id="message" name="message">
+              <span>*</span><br>
+              <label>&nbsp;</label>
+              <input type="button" id="join_form"
+                     value="ContactUs">
+  
+      </form>
             </div>
             
             <div class="right">
@@ -100,7 +92,7 @@
                 </div>
                 <div class="box">
                         <div class="text">
-                            <h3><img src="./images/contactus/Phone.png" alt="Phone" height="25">&nbsp;&nbsp;Phone</h3> 
+                            <h3><img src="./images/contactus/phone-call.png" alt="Phone" height="25">&nbsp;&nbsp;Phone</h3> 
                             <p>+1(416)474-2520</p>
                         </div>
                 </div>

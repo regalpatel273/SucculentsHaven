@@ -37,8 +37,7 @@ h2
     color: black;
     padding-left: 10px;
 }
-input[type=text],input[type=email],input[type=number],input[type=date],textarea[name=message],
- input[type=date],input[list=countries]
+input[type=text],input[type=email],input[type=number]
 {
     width: 100%;
     box-sizing: border-box;
@@ -54,31 +53,11 @@ input[type=text],input[type=email],input[type=number],input[type=date],textarea[
     margin-bottom: 5px;
     
 }
-::placeholder
-{
-    color:#333333
-}
 label
 {
     padding-left: 10px;
     color: black;
     text-align:left;
-}
-button[type=submit]
-{
-    background-color: #34A987;
-    border: none;
-    color: white;
-    cursor: pointer;
-    height: 50px;
-    font-size: large;
-    outline: none;
-    transition: all 0.5s ease-in-out;
-    width: 100%;
-}
-button[type=submit]:hover
-{
-    background:#FAE8E0;
 }
 .right 
 {
