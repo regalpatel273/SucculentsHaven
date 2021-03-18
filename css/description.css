@@ -58,13 +58,18 @@ main {
     height: auto;
     width: 300px;
   }
-  section button {
+  #atcsec {
+    display: inline;
+    float: right;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+  #atcsec button {
     background-color: #34a987;
     color: white;
     border: none;
     padding: 5px;
-    display: inline;
-    float: right;
+    display: block;
     margin-right: 1em;
     margin-bottom: 1em;
   }
@@ -86,8 +91,9 @@ main {
   #slider {
     float: left;
   }
-  section button {
+  #container button {
     background-color: #34a987;
+    width: 100px;
     border: none;
     color: white;
     cursor: pointer;
@@ -96,6 +102,7 @@ main {
     float: right;
     margin-right: 1em;
     margin-bottom: 1em;
+    margin-left: 0.5em;
   }
   footer {
     clear: both;
