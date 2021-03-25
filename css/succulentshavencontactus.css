@@ -47,12 +47,37 @@ input[type=text],input[type=email],input[type=number]
     border: none;
     columns: white;;
     border-radius: 4px;
-    font-weight: bold;
     border: 1px solid #cccccc;
     margin-top: 4px;
     margin-bottom: 5px;
     
 }
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+input[type=button]
+{
+    background-color: #34A987;
+    border: none;
+    color: white;
+    cursor: pointer;
+    height: 50px;
+    font-size: large;
+    outline: none;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+}
+button[type=button]:hover
+{
+    background:#FAE8E0;
+}
+  
 label
 {
     padding-left: 10px;
