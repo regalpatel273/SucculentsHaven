@@ -56,29 +56,17 @@
                 <div class="text">
                     <h3>Send us a message!</h3>
                 </div>
-                <form id="contact_form" name="contact_form"
-                action="join.html" method="get">
-  
-              <label for="name">Your Name:</label>
-              <input type="text" id="name" name="name" placeholder="Your name ">
-              <span style="color:rgb(221, 86, 109);">*</span><br>
-              <label for="email">Your E-mail:</label>
-              <input type="text" id="email" name="email" placeholder="Your email">
-              <span style="color:rgb(221, 86, 109);">*</span><br>
-              <label for="number">Your Number:</label>
-              <input type="text" id="number" name="number" placeholder="Your number">
-              <span style="color:rgb(221, 86, 109);">*</span><br>
-              <label for="country">Your Country:</label>
-              <select id="country" name="country" placeholder="Your country">
-                <option value="india">India</option>
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">USA</option>
-              </select>
-              <span style="color:rgb(221, 86, 109);">*</span><br>
-              <label for="Message">Your Message:</label>
-              <input type="text" id="message" name="message" placeholder="Your message">
-              <span style="color:rgb(221, 86, 109);">*</span><br>
+                <form id="contact_form" name="contact_form" action="join.html" method="get">
+              <label for="name">Your Name:</label><span style="color: red;">*</span>
+              <input type="text" id="name" name="name"><br>
+              <label for="email">Your E-mail:</label><span style="color: red;">*</span>
+              <input type="text" id="email" name="email"><br>
+              <label for="number">Your Number:</label><span style="color: red;">*</span>
+              <input type="text" id="number" name="number"><br>
+              <label for="country">Your Country:</label><span style="color: red;">*</span>
+              <input type="text" id="country" name="country"><br>
+              <label for="Message">Your Message:</label><span style="color: red;">*</span>
+              <input type="text" id="message" name="message"><br>
               <input type="button" id="join_form" value="ContactUs">
   
       </form>

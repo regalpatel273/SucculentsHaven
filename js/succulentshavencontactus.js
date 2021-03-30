@@ -11,79 +11,49 @@ var joinForm = function () {
     
     // validate the first entry
     if (name.value == "") { 
-        name.nextElementSibling.firstChild.nodeValue = 
-            "This field is required.";
+        name.previousElementSibling.firstChild.nodeValue = "This field is required.";
         isValid = false;
     } else {
-        name.nextElementSibling.firstChild.nodeValue = "";
+        name.previousElementSibling.firstChild.nodeValue = "";
     } 
-    if (isValid) {
-        $("contact_form").submit(); 
-    }
     // validate the second entry
     if (email.value == "") { 
-        email.nextElementSibling.firstChild.nodeValue = 
-            "This field is required.";
+        email.previousElementSibling.firstChild.nodeValue = "This field is required.";
         isValid = false;
     } else {
-        email.nextElementSibling.firstChild.nodeValue = "";
+        email.previousElementSibling.firstChild.nodeValue = "";
     } 
-    if (isValid) {
-        $("contact_form").submit(); 
-    }
     // validate the third entry
     if (number.value == "") { 
-        number.nextElementSibling.firstChild.nodeValue = 
+        number.previousElementSibling.firstChild.nodeValue = 
             "This field is required.";
         isValid = false;
     } else {
-        number.nextElementSibling.firstChild.nodeValue = "";
+        number.previousElementSibling.firstChild.nodeValue = "";
     } 
-    if (isValid) {
-        $("contact_form").submit(); 
-    }
     // validate the fourth entry
     if (country.value == "") { 
-        country.nextElementSibling.firstChild.nodeValue = 
+        country.previousElementSibling.firstChild.nodeValue = 
             "This field is required.";
         isValid = false;
     } else {
-        country.nextElementSibling.firstChild.nodeValue = "";
-    } 
-    if (isValid) {
-        $("contact_form").submit(); 
+        country.previousElementSibling.firstChild.nodeValue = "";
     }
      // validate the fifth entry
      if (message.value == "") { 
-        message.nextElementSibling.firstChild.nodeValue = 
+        message.previousElementSibling.firstChild.nodeValue = 
             "This field is required.";
         isValid = false;
     } else {
-        message.nextElementSibling.firstChild.nodeValue = "";
+        message.previousElementSibling.firstChild.nodeValue = "";
     } 
     if (isValid) {
         $("contact_form").submit(); 
     }
 }
-    window.onload = function () {
-        $("join_form").onclick = joinForm;
-        $("name").focus();
-    }
 window.onload = function () {
     $("join_form").onclick = joinForm;
-    $("email").focus();
- } 
-window.onload = function () {
-    $("join_form").onclick = joinForm;
-    $("number").focus();
- } 
-window.onload = function () {
-     $("join_form").onclick = joinForm;
-     $("country").focus();
- } 
- window.onload = function () {
-    $("join_form").onclick = joinForm;
-    $("message").focus();
+    $("name").focus();
  } 
      
      
