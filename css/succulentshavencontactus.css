@@ -4,12 +4,12 @@ body
     background-color:whitesmoke;
 }
 
-/*header{
+header{
     background-image: radial-gradient(rgba(0, 0, 0, 0.438), rgba(255, 255, 255, 0)), url('../images/contactus/contactus-banner.png');
     background-position: top center;
     background-size: cover;
     height: 350px;
-}*/
+}
 #imageSlider{
     height: 350px;
     background-position: top-center;

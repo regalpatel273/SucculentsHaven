@@ -17,7 +17,7 @@
         $(document).ready(function(){
             $('#imageSlider').bxSlider({
                 minSlider: 2,
-                maxSlider: 2
+                maxSlider: 2,
             });
 
         });
@@ -58,13 +58,9 @@
     </nav>
     <main>
         <div>
-            <ul id="imageSlider">
-                <li><img src="./images/contactus/contactus-banner.png"/></li>
-                <li><img src="./images/contactus/image7.png"/></li>
-               </ul>
-            <!--<header>
+            <header>
                 <h1>Contact Us</h1>
-            </header>-->
+            </header>
             <p style="text-align:center;color: black; font-size: 20px;">We are here to help. Contact us to make an order.<br>
                     Our team is happy to answer your sales question.</p>
         </div>
@@ -73,7 +69,7 @@
                 <div class="text">
                     <h3>Send us a message!</h3>
                 </div>
-                <form id="contact_form" name="contact_form" action="join.html" method="get">
+              <form id="contact_form" name="contact_form" action="join.html" method="get">
               <label for="name">Your Name:</label><span style="color: red;">*</span>
               <input type="text" id="name" name="name"><br>
               <label for="email">Your E-mail:</label><span style="color: red;">*</span>
@@ -85,8 +81,7 @@
               <label for="Message">Your Message:</label><span style="color: red;">*</span>
               <input type="text" id="message" name="message"><br>
               <input type="button" id="join_form" value="ContactUs">
-  
-      </form>
+              </form>
             </div>
             
             <div class="right">
