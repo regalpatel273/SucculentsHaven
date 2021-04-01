@@ -1,156 +1,351 @@
+/* Media query for Mobile layout */
+/* Style for the banner */
 
-    #about-us-p {
-        width: 50%;
-        padding: 3em;
-    }
+#container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-    .about-us-img {
-        align-items: center;
-        width: 50%;
-    }
+body {
+  min-width: 375px;
+}
+#banner {
+  background: url(../images/home/banner-img.png);
+  background-size: cover;
+  background-position: center center;
+  height: 350px;
+  position: relative;
+  width: 100%;
+}
 
-    #featured h1 {
-        font-size: 50px;
-    }
-    
+#banner-area {
+  font-size: 30px;
+  left: 10%;
+  position: absolute;
+  top: 35%;
+}
 
-    .feat-succulent {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+#banner-area a {
+  text-decoration: none;
+}
 
-    .feat-img {
-        height: 250px;
-        width: auto;
-        margin: 2em;
-    }
+.banner-text:first-child {
+  line-height: 20px;
+}
 
-    .feat-img img {
-        height: 230px;
-    }
+.banner-text {
+  color: whitesmoke;
+  font-weight: 400;
+}
 
-    #bestdealcontainer {
-        flex-direction: row;
-        text-align: left;
-        width: 80%;
-    }
+.buttonHome {
+  background-color: #34a987;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  outline: none;
+  padding: 0.3em 0.75em;
+  width: 85px;
+}
 
-    .btnContainer {
-        display: unset;
-        justify-content: unset;
-    }
+.buttonHome:active {
+  transform: translateY(1px);
+}
 
-    #bestdeal h1 {
-        font-size: 28px;
-        line-height: 28px;
-        padding: 1em 0 0 0;
-    }
-    
-    #bestdeal img {
-        padding-right: 2em;
-        height: 250px;
-    }
-    
-    #bestdeal p {
-        padding-bottom: 1em;
-    }
+.btnContents {
+  color: white;
+  font-weight: 500;
+}
 
-    #offers {
-        background-color: white;
-        padding: 2em;
-    }
-    
-    #offerscontainer {
-        flex-direction: row;
-        width: 90%;
-    }
+/* Style for the about us section */
+#about-us {
+  background-color: #add6ca;
+  padding: 1em;
+  text-align: center;
+}
 
-    .offercolumn {
-        margin: 1em;
-    }    
-    .offercolumn p {
-        font-size: 18px;
-    }
+h1,
+h2 {
+  font-weight: normal;
+  letter-spacing: 3px;
+}
 
-    .offercolumn img {
-        height: 100px;
-    }
-    
+h1 {
+  font-size: 2em;
+}
+
+#about-us-p {
+  font-weight: 300;
+  padding: 1em;
+  font-size: 15px;
+}
+
+/* Styles for features */
+#featured {
+  padding: 2em;
+  display: block;
+  max-width: 100%;
+}
+
+#featured h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 40px;
+  text-align: center;
+}
+
+#featured span {
+  font-size: 25px;
+  letter-spacing: 5px;
+}
+
+.feat-hdr {
+  padding: 1em;
+}
+
+.feat-succulent {
+  margin: auto;
+}
+
+.feat-img {
+  background-color: white;
+  border-radius: 5px;
+  width: 180px;
+  height: 220px;
+  padding: 1em;
+  margin: 1em auto;
+}
+
+.feat-img img {
+  height: 180px;
+}
+
+#bestdeal {
+  background-color: white;
+  padding: 2em;
+}
+
+#bestdealcontainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}
+
+#bestdeal h1 {
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 0;
+  padding: 1em;
+}
+
+#bestdeal img {
+  height: 200px;
+}
+
+.btnContainer {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+#offers {
+  background-color: white;
+  padding: 2em;
+}
+
+#offerscontainer {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 90%;
+}
+
+.offercolumn {
+  width: 100%;
+  margin: 1em 0 1em 0;
+  text-align: center;
+}
+
+.offercolumn p {
+  font-size: 13px;
+}
+
+.offercolumn img {
+  height: 80px;
+}
+
+/* Media query for Tablet layout */
+@media only screen and (min-width: 678px) {
+  /* Style for the banner */
+  #banner {
+    height: 350px;
+  }
+
+  #banner-area {
+    font-size: 45px;
+  }
+
+  .buttonHome {
+    font-size: 20px;
+    width: 110px;
+  }
+
+  /* Style for the about us section */
+  #about-us {
+    display: flex;
+  }
+
+  #about-us-p {
+    width: 50%;
+    padding: 3em;
+  }
+
+  .about-us-img {
+    align-items: center;
+    width: 50%;
+  }
+
+  #featured h1 {
+    font-size: 50px;
+  }
+
+  .feat-succulent {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .feat-img {
+    height: 250px;
+    width: auto;
+    margin: 2em;
+  }
+
+  .feat-img img {
+    height: 230px;
+  }
+
+  #bestdealcontainer {
+    flex-direction: row;
+    text-align: left;
+    width: 80%;
+  }
+
+  .btnContainer {
+    display: unset;
+    justify-content: unset;
+  }
+
+  #bestdeal h1 {
+    font-size: 28px;
+    line-height: 28px;
+    padding: 1em 0 0 0;
+  }
+
+  #bestdeal img {
+    padding-right: 2em;
+    height: 250px;
+  }
+
+  #bestdeal p {
+    padding-bottom: 1em;
+  }
+
+  #offers {
+    background-color: white;
+    padding: 2em;
+  }
+
+  #offerscontainer {
+    flex-direction: row;
+    width: 90%;
+  }
+
+  .offercolumn {
+    margin: 1em;
+  }
+  .offercolumn p {
+    font-size: 18px;
+  }
+
+  .offercolumn img {
+    height: 100px;
+  }
 }
 
 /* Media query for desktop layout 895px*/
 @media only screen and (min-width: 1360px) {
-    /* Style for the banner section */
-     #banner {
-        height: 600px;
-    }
+  /* Style for the banner section */
+  #banner {
+    height: 600px;
+  }
 
-    #banner-area{
-        font-size: 70px;
-    }
+  #banner-area {
+    font-size: 70px;
+  }
 
-    .banner-text:first-child {
-        line-height: 50px;
-    }
+  .banner-text:first-child {
+    line-height: 50px;
+  }
 
-    .buttonHome {
-        font-size: 25px;
-        width: 140px;
-    }
+  .buttonHome {
+    font-size: 25px;
+    width: 140px;
+  }
 
-    /* Style for the about us section */
-    #about-us {
-        display: flex;
-    }
+  /* Style for the about us section */
+  #about-us {
+    display: flex;
+  }
 
-    #about-us-p {
-        width: 70%;
-        font-size: 18px;
-    }
+  #about-us-p {
+    width: 70%;
+    font-size: 18px;
+  }
 
+  .about-us-img {
+    padding: 1em;
+    width: 30%;
+  }
 
-    .about-us-img {
-        padding: 1em;
-        width: 30%;
-    }
+  .about-us-img img {
+    max-height: 100%;
+  }
 
-    .about-us-img img {
-        max-height: 100%;
-    }
+  /* Styles for features section */
+  .feat-img {
+    height: 260px;
+  }
 
-    /* Styles for features section */
-    .feat-img {
-        height: 260px;
-    }
+  .feat-img img {
+    height: 240px;
+  }
 
-    .feat-img img {
-        height: 240px;
-    }
+  .feat-img img:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
 
-    .feat-img img:hover{
-        transform: scale(1.05);
-        transition: .5s;
-    }
+  .featrow {
+    display: flex;
+  }
 
-    .featrow {
-        display: flex;
-    }
+  #bestdeal {
+    padding: 3em;
+  }
 
-    #bestdeal {
-        padding: 3em;
-    }
+  #bestdealcontainer {
+    width: 50%;
+  }
 
-    #bestdealcontainer {
-        width: 50%;
-    }
+  #bestdeal h1 {
+    font-size: 35px;
+    line-height: 35px;
+  }
 
-    #bestdeal h1 {
-        font-size: 35px;
-        line-height: 35px;
-    }
-    
-    #bestdeal img {
-        height: 275px;
-    }
+  #bestdeal img {
+    height: 275px;
+  }
 }

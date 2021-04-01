@@ -1,107 +1,110 @@
 main {
-    margin-top: 100px;
+  margin-top: 100px;
 }
 
-@media(min-width: 320px){
-    /* Styles for mobile layout.  */
-    #container {
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 1%;
-        background-color: white;
-        overflow: hidden;
-        padding-right: 1em;
-        width: fit-content;
-    }
-    section img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 0.5em;
-        height: auto;
-        width: 300px;
-    }
-    section p, h3{
-        padding-left: 0.5em;
-    }
-    section button{
-        background-color: #34A987;
-        color: white;
-        border: none;
-        padding: 5px;
-        display: inline;
-        float: right;
-        margin-right: 1em;
-        margin-bottom: 1em;
-    }
-    footer{
-        clear: both;
-    }
+@media (min-width: 320px) {
+  /* Styles for mobile layout.  */
+  #container {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    background-color: white;
+    overflow: hidden;
+    padding-right: 1em;
+    width: fit-content;
+  }
+  section .zebra {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+    height: auto;
+    width: 300px;
+  }
+  section p,
+  h3 {
+    padding-left: 0.5em;
+  }
+  section button {
+    background-color: #34a987;
+    color: white;
+    border: none;
+    padding: 5px;
+    display: inline;
+    float: right;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+  footer {
+    clear: both;
+  }
 }
-@media(min-width: 481px){
-    /* Styles for desktop layout.  */
-    #container{
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 1%;
-        background-color: white;
-        overflow: hidden;
-        text-align: justify;
-        padding-right: 1em;
-    }
-    section img{
-        float: left;
-        margin-left: 1em;
-        margin-right: 1em;
-        margin-bottom: 1em;
-        height: auto;
-        width: 300px;
-    }
-    section button{
-        background-color: #34A987;
-        color: white;
-        border: none;
-        padding: 5px;
-        display: inline;
-        float: right;
-        margin-right: 1em;
-        margin-bottom: 1em;
-    }
-    footer{
-        clear: both;
-    }
+@media (min-width: 481px) {
+  /* Styles for desktop layout.  */
+  #container {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    background-color: white;
+    overflow: hidden;
+    text-align: justify;
+    padding-right: 1em;
+  }
+  section .zebra {
+    float: left;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    height: auto;
+    width: 300px;
+  }
+  #atcsec {
+    display: inline;
+    float: right;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+  #atcsec button {
+    background-color: #34a987;
+    color: white;
+    border: none;
+    padding: 5px;
+    display: block;
+    margin-right: 1em;
+    margin-bottom: 1em;
+  }
+  footer {
+    clear: both;
+  }
 }
-@media(min-width: 769px){
-    /* Styles for desktop layout.  */
-    #container{
-        margin-left: 10%;
-        margin-right: 10%;
-        margin-bottom: 1%;
-        background-color: white;
-        overflow: hidden;
-        text-align: justify;
-        padding-right: 1em;
-    }
-    section img{
-        float: left;
-        margin-left: 1em;
-        margin-right: 1em;
-        margin-bottom: 1em;
-        height: auto;
-        width: 300px;
-    }
-    section button{
-        background-color: #34A987;
-        border: none;
-        color: white;
-        cursor: pointer;
-        padding: 5px;
-        display: inline;
-        float: right;
-        margin-right: 1em;
-        margin-bottom: 1em;
-    }
-    footer{
-        clear: both;
-    }
+@media (min-width: 769px) {
+  /* Styles for desktop layout.  */
+  #container {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 1%;
+    background-color: white;
+    overflow: hidden;
+    text-align: justify;
+    padding-right: 1em;
+  }
+  #slider {
+    float: left;
+  }
+  #container button {
+    background-color: #34a987;
+    width: 100px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px;
+    display: inline;
+    float: right;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    margin-left: 0.5em;
+  }
+  footer {
+    clear: both;
+  }
 }

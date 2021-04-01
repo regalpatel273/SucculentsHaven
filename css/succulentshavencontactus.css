@@ -10,6 +10,13 @@ header{
     background-size: cover;
     height: 350px;
 }
+#imageSlider{
+    height: 350px;
+    background-position: top-center;
+    background-size:cover;
+
+}
+
 header h1{
     font-family: 'Dancing Script', cursive;
     font-size: 50px;
@@ -37,8 +44,7 @@ h2
     color: black;
     padding-left: 10px;
 }
-input[type=text],input[type=email],input[type=number],input[type=date],textarea[name=message],
- input[type=date],input[list=countries]
+input[type=text],input[type=email],input[type=number]
 {
     width: 100%;
     box-sizing: border-box;
@@ -48,23 +54,21 @@ input[type=text],input[type=email],input[type=number],input[type=date],textarea[
     border: none;
     columns: white;;
     border-radius: 4px;
-    font-weight: bold;
     border: 1px solid #cccccc;
     margin-top: 4px;
     margin-bottom: 5px;
     
 }
-::placeholder
-{
-    color:#333333
-}
-label
-{
-    padding-left: 10px;
-    color: black;
-    text-align:left;
-}
-button[type=submit]
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+input[type=button]
 {
     background-color: #34A987;
     border: none;
@@ -76,9 +80,16 @@ button[type=submit]
     transition: all 0.5s ease-in-out;
     width: 100%;
 }
-button[type=submit]:hover
+button[type=button]:hover
 {
     background:#FAE8E0;
+}
+  
+label
+{
+    padding-left: 10px;
+    color: black;
+    text-align:left;
 }
 .right 
 {
