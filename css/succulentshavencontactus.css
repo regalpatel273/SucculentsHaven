@@ -113,6 +113,10 @@ label
 {
     padding: 10px 10px;
 }
+#map{
+    height: 200px;
+    width: 100%;
+}
 
 .box {
     display: block;
