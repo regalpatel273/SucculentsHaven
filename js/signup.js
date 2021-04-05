@@ -24,12 +24,18 @@ $(document).ready(function () {
         }
     });
     $("#signuplink").click(function() {
-        $("#sign").hide(1000);
-        $("#SIGN").show(1000);
+        $("#sign").slideUp(500);
+        $("#sign").hide(500);
+        $("#SIGN").slideDown(500);
+        $("#SIGN").show(500);
+        $(".compulsion").text("*");
     });
     $("#signinlink").click(function() {
-        $("#SIGN").hide(1000);
-        $("#sign").show(1000);
+        $("#SIGN").slideUp(500);
+        $("#SIGN").hide(500);
+        $("#sign").slideDown(500);
+        $("#sign").show(500);
+        $(".compulsion").text("*");
     });
 
     $("#fname").focus();
