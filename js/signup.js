@@ -15,8 +15,11 @@ $(document).ready(function () {
         if (password == "") {
             $("#password").next().text("Mandatory");
             isValid = false;
-        } else {
-            $("#passowrd").next().text("");
+        } else if(password.length < 8) {
+            $("#password").next().text("Password length should be more than 8 characters");
+        }
+        else{
+            $("#password").next().text("");
         }
         if (isValid) {
             $("#login-form").submit();
@@ -29,6 +32,7 @@ $(document).ready(function () {
         $("#SIGN").slideDown(500);
         $("#SIGN").show(500);
         $(".compulsion").text("*");
+        $('input').val("");
     });
     $("#signinlink").click(function() {
         $("#SIGN").slideUp(500);
@@ -36,6 +40,7 @@ $(document).ready(function () {
         $("#sign").slideDown(500);
         $("#sign").show(500);
         $(".compulsion").text("*");
+        $('input').val("");
     });
 
     $("#fname").focus();
