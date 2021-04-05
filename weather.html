@@ -3,20 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Dashboard</title>
+    <title>Succulents Haven | Weather</title>
+    <link rel="stylesheet" href="./css/succulentshaven.css">
+    <link rel="stylesheet" type="text/css" href="/css/weatherstyle.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap">
+    <link rel="icon" href="./images/home/succulents-haven-icon.png" type="image/gif" sizes="16x16">
 
      <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
     <!-- CSS Styling -->
-    <link rel="stylesheet" type="text/css" href="css/weatherstyle.css">
+    <link rel="stylesheet" type="text/css" href="/css/weatherstyle.css">
     
     <!-- Navbar -->
     <body>
+        <nav class="align-justify-center">
+            <input type="checkbox" id="resp-menu" >
+            <div class="logo-container align-justify-center">
+                <div class="logo align-items-center">
+                    <a href="index.html" class="align-items-center">
+                        <img src="./images/home/succulents-haven-icon.png" alt="Succlents Haven Logo" height="50">
+                        <span class="logo-succulents">succulents</span>
+                        <span class="logo-haven">haven</span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                    <li><a href="weather.html">Weather</a></li>
+                </ul>
+                <div class="shopbag">
+                    <div class="shop-and-account">
+                        <a href="cart.html"><img src="./images/home/shop-bag.png" alt="Shop Bag" height="60px"></a>
+                        <a href="signup.html"><img src="./images/home/account.png" alt="Search" height="60px"></a>
+                    </div>
+                </div>    
+            </div>
+            <div class="burger-container">
+                <label for="resp-menu" class="burger">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </label>
+            </div>
+        </nav>
+    <main>
         <nav class="navbar navbar-dark bg-dark d-flex justify-content-center">
-        <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
-    </nav>
+            <span class=" navbar-brand mb-0 h1">Weather Dashboard</span>
+        </nav>
 
     <!-- City Search -->
     <div class="container-fluid">
@@ -60,6 +97,6 @@
     <script src="js/weather.js"></script>
     <!-- moment.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-
+</main>
 </body>
 </html>
