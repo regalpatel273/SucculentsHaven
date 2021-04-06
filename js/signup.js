@@ -1,146 +1,137 @@
-var $ = (id) => {
-    return document.getElementById(id);
-}
+$(document).ready(function () {
+    $("#email").focus();
+    $("#login").click(function(){
+        var email = $("#email").val();
+        var password = $("#password").val();
+        var isValid = true;
 
-var signinValidate = () => {
-    let emailId = $("email");
-    let password = $("password");
-    let isValid = true;
-    if(emailId.value == ""){
-        $("email").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else{
-        $("email").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(password.value == ""){
-        $("password").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else{
-        $("password").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(isValid){
-        $("login-form").submit();
-        $("login-form").setAttribute("action","index.html");
-    }
-}
+        if(email == "") { 
+            $("#email").next().text("Mandatory");
+            isValid = false;
+        } else {
+            $("#email").next().text("");
+        }
+ 
+        if (password == "") {
+            $("#password").next().text("Mandatory");
+            isValid = false;
+        } else if(password.length < 8) {
+            $("#password").next().text("Password length should be more than 8 characters");
+        }
+        else{
+            $("#password").next().text("");
+        }
+        if (isValid) {
+            $("#login-form").submit();
+            $("#login-form").attr("action","index.html");
+        }
+    });
+    $("#signuplink").click(function() {
+        $("#sign").slideUp(500);
+        $("#sign").hide(500);
+        $("#SIGN").slideDown(500);
+        $("#SIGN").show(500);
+        $(".compulsion").text("*");
+        $('input').val("");
+    });
+    $("#signinlink").click(function() {
+        $("#SIGN").slideUp(500);
+        $("#SIGN").hide(500);
+        $("#sign").slideDown(500);
+        $("#sign").show(500);
+        $(".compulsion").text("*");
+        $('input').val("");
+    });
 
-var signupValidate = () => {
-    let firstName = $("fname");
-    let lastName = $("lname");
-    let email_id = $("email1");
-    let phnnum = $("phnnum");
-    let addline1 = $("addline1");
-    let city = $("city");
-    let state = $("state");
-    let country = $("country");
-    let password1 = $("pwd1");
-    let password2 = $("pwd2");
-    let isValid = true;
-    if(firstName.value == ""){
-        $("fname").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else{
-        $("fname").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(lastName.value == ""){
-        $("lname").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else{
-        $("lname").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(email_id.value == ""){
-        $("email1").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else{
-        $("email1").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(phnnum.value == ""){
-        $("phnnum").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else{
-        $("phnnum").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(addline1.value == ""){
-        $("addline1").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else{
-        $("addline1").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(city.value == ""){
-        $("city").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else{
-        $("city").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(state.value == ""){
-        $("state").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else{
-        $("state").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(country.value == ""){
-        $("country").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else{
-        $("country").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(password1.value == "" && password2.value == ""){
-        $("pwd1").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else{
-        $("pwd1").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(password2.value == ""){
-        $("pwd2").nextElementSibling.firstChild.nodeValue = "Required";
-        isValid = false;
-    }
-    else if(password1.value != password2.value){
-        $("pwd2").nextElementSibling.firstChild.nodeValue = "Passwords doesn't match";
-        isValid = false;
-    }
-    else{
-        $("pwd2").nextElementSibling.firstChild.nodeValue = "";
-    }
-    if(isValid){
-        $("signup-form").submit();
-        $("signup-form").setAttribute("action","index.html");
-    }
-}
+    $("#fname").focus();
+    $("#logup").click(function(){
+        var firstname = $("#fname").val();
+        var lastname = $("#lname").val();
+        var emailid = $("#email1").val();
+        var phnnum = $("#phnnum").val();
+        var addline1 = $("#addline1").val();
+        var city = $("#city").val();
+        var state = $("#state").val();
+        var country = $("#country").val();
+        var password1 = $("#pwd1").val();
+        var password2 = $("#pwd2").val();
+        var isValid = true;
 
-var signInsignUp = () => {
-    if($("sign").hasAttribute("class")){
-        $("sign").removeAttribute("class");
-        $("sign").setAttribute("class","signin-close");
-        $("SIGN").removeAttribute("class");
-        $("SIGN").setAttribute("class","signup-open");
-    }
-}
+        if(firstname == "") { 
+            $("#fname").next().text("Mandatory");
+            isValid = false;
+        } else {
+            $("#fname").next().text("");
+        }
+ 
+        if (lastname == "") {
+            $("#lname").next().text("Mandatory");
+            isValid = false;
+        } else {
+            $("#lname").next().text("");
+        }
 
-var signUpsignIn = () => {
-    if($("SIGN").hasAttribute("class")){
-        $("SIGN").removeAttribute("class");
-        $("SIGN").setAttribute("class","signup-close");
-        $("sign").removeAttribute("class");
-        $("sign").setAttribute("class","signin-open");
-    }
-}
+        if(emailid == "") { 
+            $("#email1").next().text("Mandatory");
+            isValid = false;
+        } else {
+            $("#email1").next().text("");
+        }
 
-window.onload = () => {
-    $("login").onclick = signinValidate;
-    $("email").focus();
-    $("signuplink").onclick = signInsignUp;
-    $("logup").onclick = signupValidate;
-    $("fname").focus();
-    $("signinlink").onclick = signUpsignIn;
-}
+        if(phnnum == "") { 
+            $("#phnnum").next().text("Mandatory");
+            isValid = false;
+        } else {
+            $("#phnnum").next().text("");
+        }
+
+        if(addline1 == "") { 
+            $("#addline1").next().text("Mandatory");
+            isValid = false;
+        } else {
+            $("#addline1").next().text("");
+        }
+        
+        if(city == "") { 
+            $("#city").next().text("Mandatory");
+            isValid = false;
+        } else {
+            $("#city").next().text("");
+        }
+
+        if(state == "") { 
+            $("#state").next().text("Mandatory");
+            isValid = false;
+        } else {
+            $("#state").next().text("");
+        }
+
+        if(country == "") { 
+            $("#country").next().text("Mandatory");
+            isValid = false;
+        } else {
+            $("#country").next().text("");
+        }
+
+        if (password1 == "") {
+            $("#pwd1").next().text("Mandatory");
+            isValid = false;
+        } else {
+            $("#pwd1").next().text("");
+        }
+        
+        if (password2 == "") {
+            $("#pwd2").next().text("Mandatory");
+            isValid = false;
+        } else if (password1 != password2) {
+            $("#pwd2").next().text("Password doesn't match");
+            isValid = false;
+        } else {
+            $("#pwd2").next().text("");
+        }
+
+        if (isValid) {
+            $("#signup-form").submit();
+        }
+    });
+});
