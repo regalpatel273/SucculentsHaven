@@ -15,15 +15,12 @@ $(document).ready(function () {
         if (password == "") {
             $("#password").next().text("Mandatory");
             isValid = false;
-        } else if(password.length < 8) {
-            $("#password").next().text("Password length should be more than 8 characters");
-        }
-        else{
+        } else{
             $("#password").next().text("");
         }
         if (isValid) {
             $("#login-form").submit();
-            $("#login-form").attr("action","index.html");
+            $("#inlog").attr("href","index.html");
         }
     });
     $("#signuplink").click(function() {
