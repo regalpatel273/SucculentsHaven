@@ -50,12 +50,8 @@
        /* background-color:  lightgray ; */
     }
     main img{
-        display: inline-block;
-      /*  margin-left: 0.3%;
-        margin-right: 0.3%; */
-        padding: 0.3%;
-        width: 40%;
-        height: auto;
+        margin: 0.5em;
+        transition: 0.5s;
     }
 
 }
