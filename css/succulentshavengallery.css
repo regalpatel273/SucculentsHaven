@@ -16,7 +16,7 @@
 /* Desktop Layout */
 @media only screen and (min-width:895px) {
     header{
-        background-image: url('../images/gallery/image10.png');
+        background-image: url('../images/gallery/Gallery-Banner.png');
         padding-bottom: 11%;
         padding-top: 1%;
         width: 100%;
@@ -50,12 +50,8 @@
        /* background-color:  lightgray ; */
     }
     main img{
-        display: inline-block;
-      /*  margin-left: 0.3%;
-        margin-right: 0.3%; */
-        padding: 0.3%;
-        width: 40%;
-        height: auto;
+        margin: 0.5em;
+        transition: 0.5s;
     }
 
 }

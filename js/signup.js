@@ -4,6 +4,7 @@ $(document).ready(function () {
         var email = $("#email").val();
         var password = $("#password").val();
         var isValid = true;
+        var valid = true;
 
         if(email == "") { 
             $("#email").next().text("Mandatory");
@@ -15,30 +16,45 @@ $(document).ready(function () {
         if (password == "") {
             $("#password").next().text("Mandatory");
             isValid = false;
-        } else if(password.length < 8) {
-            $("#password").next().text("Password length should be more than 8 characters");
-        }
-        else{
+        } else{
             $("#password").next().text("");
         }
         if (isValid) {
-            $("#login-form").submit();
-            $("#login-form").attr("action","index.html");
+            if(email == sessionStorage.getItem("emailid")){
+                if(password == sessionStorage.getItem("pwd")){
+                    $("#tname").text(sessionStorage.getItem("fname")+" "+sessionStorage.getItem("lname"));
+                    $("#tadd").text(sessionStorage.getItem("add1"));
+                    $("#tcity").text(sessionStorage.getItem("city"));
+                    $("#tstate").text(sessionStorage.getItem("state"));
+                    $("#tcountry").text(sessionStorage.getItem("country"));
+                    $("#temail").text(sessionStorage.getItem("emailid"));
+                }
+                else{
+                    $("#password").next().text("incorrect password");
+                    valid = false;
+                }
+            }
+            else{
+                $("#email").next().text("incorrect email id");
+                valid = false;
+            }
+            if(valid){
+                $("#sign").slideUp().hide(1000);
+                $("#signindone").slideDown().show(1000);
+                $("#login-form").submit();
+                $("#inlog").attr("href","index.html");
+            }            
         }
     });
     $("#signuplink").click(function() {
-        $("#sign").slideUp(500);
-        $("#sign").hide(500);
-        $("#SIGN").slideDown(500);
-        $("#SIGN").show(500);
+        $("#sign").slideUp(1000).hide(1000);
+        $("#SIGN").slideDown(1000).show(1000);
         $(".compulsion").text("*");
         $('input').val("");
     });
     $("#signinlink").click(function() {
-        $("#SIGN").slideUp(500);
-        $("#SIGN").hide(500);
-        $("#sign").slideDown(500);
-        $("#sign").show(500);
+        $("#SIGN").slideUp(1000).hide(1000);
+        $("#sign").slideDown(1000).show(1000);
         $(".compulsion").text("*");
         $('input').val("");
     });
@@ -129,8 +145,15 @@ $(document).ready(function () {
         } else {
             $("#pwd2").next().text("");
         }
-
         if (isValid) {
+            sessionStorage.setItem("fname",firstname);
+            sessionStorage.setItem("lname",lastname);
+            sessionStorage.setItem("add1",addline1);
+            sessionStorage.setItem("city",city);
+            sessionStorage.setItem("state",state);
+            sessionStorage.setItem("country",country);
+            sessionStorage.setItem("emailid",emailid);
+            sessionStorage.setItem("pwd",password1);
             $("#signup-form").submit();
         }
     });
