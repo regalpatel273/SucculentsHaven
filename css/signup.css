@@ -1,5 +1,6 @@
 .signin-open,
-.signup-open {
+.signup-open,
+#signindone {
   background-color: white;
   display: block;
   margin-top: 1em;
