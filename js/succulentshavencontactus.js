@@ -1,63 +1,54 @@
-var $ = function (id) {
-    return document.getElementById(id);
-}
-var joinForm = function () {
-    var name = $("name");
-    var email = $("email");
-    var number = $("number");
-	var country = $("country");
-	var message = $("message");
-    var isValid = true;
-    
-    // validate the first entry
-    if (name.value == "") { 
-        name.previousElementSibling.firstChild.nodeValue = "This field is required.";
-        isValid = false;
-    } else {
-        name.previousElementSibling.firstChild.nodeValue = "";
-    } 
-    // validate the second entry
-    if (email.value == "") { 
-        email.previousElementSibling.firstChild.nodeValue = "This field is required.";
-        isValid = false;
-    } else {
-        email.previousElementSibling.firstChild.nodeValue = "";
-    } 
-    // validate the third entry
-    if (number.value == "") { 
-        number.previousElementSibling.firstChild.nodeValue = 
-            "This field is required.";
-        isValid = false;
-    } else {
-        number.previousElementSibling.firstChild.nodeValue = "";
-    } 
-    // validate the fourth entry
-    if (country.value == "") { 
-        country.previousElementSibling.firstChild.nodeValue = 
-            "This field is required.";
-        isValid = false;
-    } else {
-        country.previousElementSibling.firstChild.nodeValue = "";
-    }
-     // validate the fifth entry
-     if (message.value == "") { 
-        message.previousElementSibling.firstChild.nodeValue = 
-            "This field is required.";
-        isValid = false;
-    } else {
-        message.previousElementSibling.firstChild.nodeValue = "";
-    } 
-    if (isValid) {
-        $("contact_form").submit(); 
-    }
-}
-window.onload = function () {
-    $("join_form").onclick = joinForm;
-    $("name").focus();
- } 
-     
-     
-     
- 
+$(document).ready(function () {
+    $("#name").focus();
+    $("#contactus").click(function(){
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var phnnum = $("#number").val();
+        var country = $("#country").val();
+        var message = $("#message").val();
+        var isValid = true;
 
-    
+        if(name == "") { 
+            $("#name").next().text("This field is required");
+            isValid = false;
+        } else {
+            $("#name").next().text("");
+        }
+
+        if(email == "") { 
+            $("#email").next().text("This field is required");
+            isValid = false;
+        } else {
+            $("#email").next().text("");
+        }
+
+        if(phnnum == "") { 
+            $("#number").next().text("This field is required");
+            isValid = false;
+        } else {
+            $("#number").next().text("");
+        }
+
+        if(country == "") { 
+            $("#country").next().text("This field is required");
+            isValid = false;
+        } else {
+            $("#country").next().text("");
+        }
+
+        if (message == "") {
+            $("#message").next().text("This field is required");
+            isValid = false;
+        } else {
+            $("#message").next().text("");
+        }
+        if (isValid) {
+            sessionStorage.setItem("name",name);
+            sessionStorage.setItem("email",email);
+            sessionStorage.setItem("number",phnnum);
+            sessionStorage.setItem("country",country);
+            sessionStorage.setItem("message",message);
+            $("#contact-form").submit();
+        }
+    });
+});
