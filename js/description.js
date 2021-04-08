@@ -42,63 +42,63 @@ $(document).ready(function () {
         var isValid = true;
 
         if(name == "") { 
-            $("#name").next().text("Mandatory");
+            $("#name").next().text("Required");
             isValid = false;
         } else {
             $("#name").next().text("");
         }
 
         if(emailid == "") { 
-            $("#email1").next().text("Mandatory");
+            $("#email1").next().text("Required");
             isValid = false;
         } else {
             $("#email1").next().text("");
         }
 
         if(phnnum == "") { 
-            $("#phnnum").next().text("Mandatory");
+            $("#phnnum").next().text("Required");
             isValid = false;
         } else {
             $("#phnnum").next().text("");
         }
 
         if(addline1 == "") { 
-            $("#addline1").next().text("Mandatory");
+            $("#addline1").next().text("Required");
             isValid = false;
         } else {
             $("#addline1").next().text("");
         }
         
         if(city == "") { 
-            $("#city").next().text("Mandatory");
+            $("#city").next().text("Required");
             isValid = false;
         } else {
             $("#city").next().text("");
         }
 
         if(state == "") { 
-            $("#state").next().text("Mandatory");
+            $("#state").next().text("Required");
             isValid = false;
         } else {
             $("#state").next().text("");
         }
 
         if(country == "") { 
-            $("#country").next().text("Mandatory");
+            $("#country").next().text("Required");
             isValid = false;
         } else {
             $("#country").next().text("");
         }
 
         if(noc == "") { 
-            $("#nameoncard").next().text("Mandatory");
+            $("#nameoncard").next().text("Required");
             isValid = false;
         } else {
             $("#nameoncard").next().text("");
         }
 
         if(cardnum == "") { 
-            $("#cardnum").next().text("Mandatory");
+            $("#cardnum").next().text("Required");
             isValid = false;
         } else if(cardnum.length < 16 || cardnum.length > 16){
             $("#cardnum").next().text("invalid card number");
@@ -108,14 +108,14 @@ $(document).ready(function () {
 
 
         if(expdate == "") { 
-            $("#cardmonth").next().text("Mandatory");
+            $("#cardmonth").next().text("Required");
             isValid = false;
         } else {
             $("#cardmonth").next().text("");
         }
 
         if(cvv == "") { 
-            $("#cvv").next().text("Mandatory");
+            $("#cvv").next().text("Required");
             isValid = false;
         } else if (cvv > 999){
             $("#cvv").next().text("invalid cvv");
