@@ -1,0 +1,60 @@
+/* This stylesheet is created by: Ekta wadhwa(c0796396) */
+/* Styles for Mobile Layout */
+@media (min-width: 481px){
+    img{
+        max-width: 45%;
+    }
+}
+
+/* Styles for Tablet Layout */
+@media only screen and (min-width:769px) {
+    img{
+        max-width: 30%;
+    }
+}
+
+/* Desktop Layout */
+@media only screen and (min-width:895px) {
+    header{
+        background-image: url('../images/gallery/Gallery-Banner.png');
+        padding-bottom: 11%;
+        padding-top: 1%;
+        width: 100%;
+        
+    }
+    header h1{
+        text-align: center;
+        font-size: 60px;
+        font-family: poppins;
+        width: fit-content;
+        width: -moz-max-content;
+        color: white;
+        background-color: #34A987;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0.5%;
+        padding-bottom: 0.5%;
+    }
+    footer{
+        margin-top: 0.5%;
+        padding: 0.5%;
+        text-align: center;
+        background-color: lightgray;
+    }
+    body{
+        background-color: lightgray;
+    }
+    main{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+       /* background-color:  lightgray ; */
+    }
+    main img{
+        margin: 0.5em;
+        transition: 0.5s;
+    }
+
+}
+
+/* gallery page style sheet end */
