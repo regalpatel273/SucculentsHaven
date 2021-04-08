@@ -25,7 +25,7 @@ $(document).ready(function () {
     $("#makepayment").click(function(){
         $(".cart").hide(500);
         $(".pay").show(500);
-        $("#confirmpayment").focus();
+        $("#name").focus();
     });
     $("#confirmpayment").click(function(){
         var name = $("#name").val();
