@@ -59,7 +59,7 @@ $(document).ready(function () {
         $('input').val("");
     });
 
-    $("#fname").focus();
+    $("#name").focus();
     $("#logup").click(function(){
         var firstname = $("#fname").val();
         var lastname = $("#lname").val();
