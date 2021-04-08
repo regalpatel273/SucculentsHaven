@@ -44,7 +44,7 @@
             </ul>
             <div class="shopbag">
                 <div class="shop-and-account">
-                    <a href="cart.html"><img src="./images/home/shop-bag.png" alt="Shop Bag" id="cartimg" height="40px">
+                    <a href="#"><img src="./images/home/shop-bag.png" alt="Shop Bag" id="cartimg" height="40px">
                     <a href="signup.html"><img src="./images/home/account.png" alt="Search" height="35px"></a>
                 </div>
             </div>
@@ -61,7 +61,7 @@
         <div id="container">
             <section style="float: left; margin-right: 1em;">
                 <ul id="slider">
-                    <li class="zebra"><img src="./images/indoor_succulents/zebra_plant.png" alt="zebra plant" height="400" width="375"></li>
+                    <li class="zebra"><img src="./images/indoor_succulents/zebra_plant.png" alt="zebra plant" height="400" width="375" id="tcart"></li>
                     <li class="zebra"><img src="./images/indoor_succulents/zebra_plant1.jpg" alt="zebra plant" height="450" width="375"></li>
                     <li class="zebra"><img src="./images/indoor_succulents/zebra_plant2.jpg" alt="zebra plant" height="400" width="375"></li>
                 </ul>
@@ -70,11 +70,45 @@
             <p id="price" value="14.99">$ 14.99</p>
             <p id="type">Indoor Succlents</p>
             <p>Haworthia is a delightful little succulent that makes a very attractive small houseplant. These small, low growing plants form rosettes of fleshy green leaves that are generously covered with white, pearly warts or bands, giving them a distinctive appearance. Generally easy to grow, the same best practices that yield healthy aloe and echeveria plants will also produce beautiful Haworthia. Like other succulents, these plants appreciate bright light, adequate moisture in the summer, and relatively drier conditions in the winter. Avoid overwatering, but don’t let them dry out too much.</p>
+            <p id="temp"></p>
             <section id="atcsec">
                 <button type="submit" id="atcbutton">Add to Cart</button><span id="atctick"></span>
             </section>
-            
         </div>
+        <article class="cart" style="display: none;">
+            <h1>Items added to cart:</h1>
+            <section id="cartimg" style="float: left; width: auto;">
+                <img src="./images/indoor_succulents/zebra_plant.png" alt="zebra plant" height="300" width="275" id="tcart">
+            </section>
+            <section>
+                <label id="cartname">Name:</label><span></span><br>
+                <label id="cartprice">Price:</label><span></span><br>
+                <label id="cartitems">Number of items:</label><span></span><br>
+                <label class="carttotal">Total Price:</label><span></span><br>
+            </section>
+            <button type="button" id="makepayment">Click here to make Payment</button>
+        </article>
+        <article class="pay" style="display: none;">
+            <h1>Payment</h1>
+            <form id="payment-form" name="payment form" method="GET"></form>
+                <label class="carttotal">Total Price:</label><span></span><br>
+                <label>Name:</label><input type="text" id="name"><span class="compulsion">*</span><br>
+                <label>E-mail address:</label><input type="email" id="email1"><span class="compulsion">*</span><br>
+                <label>Phone Number:</label><input type="tel" id="phnnum"><span class="compulsion">*</span><br>
+                <label>Address:</label></br>
+                <label>Address Line 1:</label><input type="text" id="addline1"><span class="compulsion">*</span></br>
+                <label>Address Line 2:</label><input type="text" id="addline2"><span style="color: grey; margin-left: 0.5em;">(Optional)</span></br>
+                <label>City:</label><input type="text" id="city"><span class="compulsion">*</span></br>
+                <label>State:</label><input type="text" id="state"><span class="compulsion">*</span></br>
+                <label>Country:</label><input type="text" id="country"><span class="compulsion">*</span></br>
+                <label>Card Details:</label></br>
+                <label>Name on Card:</label><input type="text" id="nameoncard"><span class="compulsion">*</span></br>
+                <label>16 digit card number:</label><input type="number" id="cardnum"><span class="compulsion">*</span></br>
+                <label>Expiry Date:</label><input type="month" id="cardmonth"><span class="compulsion">*</span></br>
+                <label>CVV:</label><input type="password" id="cvv" max="999"><span class="compulsion">*</span></br>
+                <button type="submit" id="confirmpayment">Payment</button></br>
+            </form>
+        </article>
     </main>
     <footer>
         <div>&copy; 2020 succulentshaven</div>

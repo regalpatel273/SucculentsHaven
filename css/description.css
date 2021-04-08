@@ -35,6 +35,72 @@ main {
     margin-right: 1em;
     margin-bottom: 1em;
   }
+  .cart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    width: 90%;
+    background-color: white;
+    padding: 0.5em;
+  }
+  .cart section {
+    display: inline-block;
+    margin-top: 1em;
+    width: auto;
+    background-color: white;
+    padding: 0.5em;
+  }
+  .cart button,
+  .pay button {
+    clear: left;
+    background-color: #34a987;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
+  .cart h1,
+  .pay h1 {
+    text-align: center;
+  }
+  .pay {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    width: 90%;
+    background-color: white;
+    padding: 0.5em;
+  }
+  .pay input {
+    width: 150px;
+    padding-left: 0.5em;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .pay form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pay label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding: 1%;
+  }
+  .compulsion {
+    color: red;
+    margin-left: 0.5em;
+  }
   footer {
     clear: both;
   }
@@ -73,6 +139,72 @@ main {
     margin-right: 1em;
     margin-bottom: 1em;
   }
+  .cart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    width: 90%;
+    background-color: white;
+    padding: 0.5em;
+  }
+  .cart section {
+    display: inline-block;
+    margin-top: 1em;
+    width: auto;
+    background-color: white;
+    padding: 0.5em;
+  }
+  .cart button,
+  .pay button {
+    clear: left;
+    background-color: #34a987;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
+  .cart h1,
+  .pay h1 {
+    text-align: center;
+  }
+  .pay {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    width: 90%;
+    background-color: white;
+    padding: 0.5em;
+  }
+  .pay input {
+    width: 150px;
+    padding-left: 0.5em;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .pay form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pay label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding: 1%;
+  }
+  .compulsion {
+    color: red;
+    margin-left: 0.5em;
+  }
   footer {
     clear: both;
   }
@@ -102,6 +234,72 @@ main {
     float: right;
     margin-right: 1em;
     margin-bottom: 1em;
+    margin-left: 0.5em;
+  }
+  .cart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    width: 60%;
+    background-color: white;
+    padding: 0.5em;
+  }
+  .cart section {
+    display: inline-block;
+    margin-top: 1em;
+    width: auto;
+    background-color: white;
+    padding: 0.5em;
+  }
+  .cart button,
+  .pay button {
+    clear: left;
+    background-color: #34a987;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+  }
+  .cart h1,
+  .pay h1 {
+    text-align: center;
+  }
+  .pay {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    width: 50%;
+    background-color: white;
+    padding: 0.5em;
+  }
+  .pay input {
+    width: 250px;
+    padding-left: 0.5em;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  .pay form {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pay label {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    padding: 1%;
+  }
+  .compulsion {
+    color: red;
     margin-left: 0.5em;
   }
   footer {
