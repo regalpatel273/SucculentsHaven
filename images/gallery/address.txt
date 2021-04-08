@@ -7,3 +7,6 @@
 .\images\gallery\image7.png
 .\images\gallery\image8.png
 .\images\gallery\image9.png
+.\images\gallery\image10.png
+.\images\gallery\image11.png
+.\images\gallery\image12.png
