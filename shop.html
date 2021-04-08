@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/succulentshavenshop.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;700&display=swap">
     <link rel="icon" href="./images/home/succulents-haven-icon.png" type="image/gif" sizes="16x16">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="./js/succulentshavenshop.js"></script>
 </head>
 <body>
     <nav class="align-justify-center">
@@ -30,7 +32,7 @@
             </ul>
             <div class="shopbag">
                 <div class="shop-and-account">
-                    <a href="cart.html"><img src="./images/home/shop-bag.png" alt="Shop Bag" height="40"></a>
+                    <a href="#"><img src="./images/home/shop-bag.png" alt="Shop Bag" height="40" id="cartimg"></a>
                     <a href="signup.html"><img src="./images/home/account.png" alt="Search" height="35"></a>
                 </div>
             </div>    
@@ -49,23 +51,12 @@
         </header>
         <div id="category">
             <label>Categories</label>
-            <select>
-                <option>Indoor(default)</option>
-                <option>Outdoor</option>
+            <select id="categories">
+                <option value="indoor">Indoor</option>
+                <option value="outdoor">Outdoor</option>
+                <option value="both">Both</option>
             </select>
-        </div>
-        <div id="inventory">
-            <label>Sort By</label>
-            <select>
-                <optgroup label="Price">
-                    <option>Low to high</option>
-                    <option>High to low</option>
-                </optgroup>
-                <optgroup label="Availability">
-                    <option>In stock</option>
-                    <option>include Out of stock</option>
-                </optgroup>
-            </select>
+            <button type="button" id="apply" style="display: inline-block;">Apply</button>
         </div>
         <article id="indoor">
             <h3 id="isc">Indoor Succulents</h3>
@@ -126,7 +117,7 @@
                 <button type="button" onclick="alert('Added to cart')"  class="cartbutton">Add To Cart</button>
             </section>
         </article>
-        <article id="outdoor">
+        <article id="outdoor" style="display: none;">
             <h3>Outdoor Succulents</h3>
             <section>
                 <img src="./images/outdoor_succulents/ball_cactus.png" alt="ball cactus" class="shopimage">
@@ -182,6 +173,40 @@
                 <p class="price">$ 22.45</p>
                 <button type="button" onclick="alert('Added to cart')"  class="cartbutton">Add To Cart</button>
             </section>
+        </article>
+        <article class="cart" style="display: none;">
+            <h1>Items added to cart:</h1>
+            <section id="cartimg" style="float: left; width: auto;">
+                <img src="./images/indoor_succulents/zebra_plant.png" alt="zebra plant" height="300" width="275" id="tcart">
+            </section>
+            <section>
+                <label id="cartname">Name:</label><span></span><br>
+                <label id="cartprice">Price:</label><span></span><br>
+                <label id="cartitems">Number of items:</label><span></span><br>
+                <label class="carttotal">Total Price:</label><span></span><br>
+            </section>
+            <button type="button" id="makepayment">Click here to make Payment</button>
+        </article>
+        <article class="pay" style="display: none;">
+            <h1>Payment</h1>
+            <form id="payment-form" name="payment form" method="GET"></form>
+                <label class="carttotal">Total Price:</label><span></span><br>
+                <label>Name:</label><input type="text" id="name"><span class="compulsion">*</span><br>
+                <label>E-mail address:</label><input type="email" id="email1"><span class="compulsion">*</span><br>
+                <label>Phone Number:</label><input type="tel" id="phnnum"><span class="compulsion">*</span><br>
+                <label>Address:</label></br>
+                <label>Address Line 1:</label><input type="text" id="addline1"><span class="compulsion">*</span></br>
+                <label>Address Line 2:</label><input type="text" id="addline2"><span style="color: grey; margin-left: 0.5em;">(Optional)</span></br>
+                <label>City:</label><input type="text" id="city"><span class="compulsion">*</span></br>
+                <label>State:</label><input type="text" id="state"><span class="compulsion">*</span></br>
+                <label>Country:</label><input type="text" id="country"><span class="compulsion">*</span></br>
+                <label>Card Details:</label></br>
+                <label>Name on Card:</label><input type="text" id="nameoncard"><span class="compulsion">*</span></br>
+                <label>16 digit card number:</label><input type="number" id="cardnum"><span class="compulsion">*</span></br>
+                <label>Expiry Date:</label><input type="month" id="cardmonth"><span class="compulsion">*</span></br>
+                <label>CVV:</label><input type="password" id="cvv" max="999"><span class="compulsion">*</span></br>
+                <button type="submit" id="confirmpayment">Payment</button></br>
+            </form>
         </article>
     </main>
     <footer>
