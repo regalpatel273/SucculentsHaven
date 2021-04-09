@@ -1,18 +1,18 @@
 $(document).ready(function(){
     $("#apply").click(function() {
         if($("#categories").val() == "indoor"){
-            $("#indoor").show(500);
-            $("#outdoor").hide(500);
+            $("#indoor").fadeIn(500);
+            $("#outdoor").fadeOut(500);
             $(".cart").hide(500);
             $(".pay").hide(500);
         } else if($("#categories").val() == "outdoor"){
-            $("#indoor").hide(500);
-            $("#outdoor").show(500);
+            $("#indoor").fadeOut(500);
+            $("#outdoor").fadeIn(500);
             $(".cart").hide(500);
             $(".pay").hide(500);
         } else{
-            $("#indoor").show(500);
-            $("#outdoor").show(500);
+            $("#indoor").fadeIn(500);
+            $("#outdoor").fadeIn(500);
             $(".cart").hide(500);
             $(".pay").hide(500);
         }
@@ -22,25 +22,64 @@ $(document).ready(function(){
     $("#subs").click(function(){
         var emailID = $("#emailid").val();
         if(emailID == "") { 
-            alert("Enter email address")
+            alert("Enter email address");
         } else {
             alert("You have successfully subscribed");
         }
     });
 
-
+    var divid = 0;
+    var tcart = 0;
+    var cartname = 0;
+    var cartprice = 0;
+    var cartitems = 0;
+    var carttotal = 0;
+    var totalamount = 0;
+    $("section").find("button").click(function(){
+        divid += 1;
+        tcart += 1;
+        cartname += 1;
+        cartprice += 1;
+        cartitems += 1;
+        carttotal += 1;
+        var num = $(this).siblings(".num").children().val();
+        if(num == "" || num === 0){
+            alert("Number of items cannot be zero");
+        } else{
+            var totalprice = parseFloat($(this).siblings(".price").text().split(" ")[1]) * num;    
+            var content =  `<div id="divid${divid}" style="clear: left; width: auto;">
+                                <section class="cartimg" style="display: inline-block; width: auto;">
+                                    <img src="${$(this).siblings("img").attr("src")}" alt="succulents" height="200" width="175" id="tcart${tcart}">
+                                </section>
+                                <section style="display: inline-block; width: auto;">
+                                    <label id="cartname${cartname}">Name:</label><span> ${$(this).siblings("h3").text()}</span><br>
+                                    <label id="cartprice${cartprice}">Price:</label><span> ${$(this).siblings(".price").text()}</span><br>
+                                    <label id="cartitems${cartitems}">Number of items:</label><span> ${num}</span><br>
+                                    <label id="carttotal${carttotal}">Total Price:</label><span> $ ${totalprice}</span><br>
+                                </section>
+                            </div>`;
+            $("#divid0").find("h3").remove();
+            $(content).appendTo($(".cart").find("#divid0"));
+            totalamount += totalprice;
+            $(".carttotalamount").next().text(" $ "+totalamount);
+        }        
+    });
 
 
     $("#cartimg").click(function(){
         $("#indoor").toggle(500);
-        $("#outdoor").hide();
-        $(".cart").show(500);
+        $("#outdoor").fadeOut();
+        $(".cart").fadeIn(500);
         $("#makepayment").focus();
     });
     $("#makepayment").click(function(){
-        $(".cart").hide(500);
-        $(".pay").show(500);
-        $("#confirmpayment").focus();
+        if(totalamount === 0){
+            alert("cart empty");
+        } else{
+            $(".cart").fadeOut(500);
+            $(".pay").fadeIn(500);
+            $("#confirmpayment").focus();
+        }   
     });
     $("#confirmpayment").click(function(){
         var name = $("#name").val();
