@@ -34,7 +34,9 @@
   }
   #category {
     display: block;
-    margin-left: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
     height: fit-content;
     width: fit-content;
     background-color: #efefef;
@@ -109,7 +111,10 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
-    width: 90%;
+    width: 95%;
+    border-radius: 1em;
+    border-color: black;
+    border-style: solid;
     background-color: white;
     padding: 0.5em;
   }
@@ -143,12 +148,15 @@
     margin-right: auto;
     margin-bottom: 1em;
     margin-top: 1em;
-    width: 90%;
+    width: 95%;
+    border-radius: 1em;
+    border-color: black;
+    border-style: solid;
     background-color: white;
     padding: 0.5em;
   }
   .pay input {
-    width: 150px;
+    width: 100px;
     padding-left: 0.5em;
   }
   #cardnum::-webkit-outer-spin-button,
@@ -188,6 +196,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1em;
     height: fit-content;
     width: fit-content;
     background-color: #efefef;
@@ -260,7 +269,10 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
-    width: 90%;
+    width: 95%;
+    border-radius: 1em;
+    border-color: black;
+    border-style: solid;
     background-color: white;
     padding: 0.5em;
   }
@@ -294,7 +306,10 @@
     margin-right: auto;
     margin-bottom: 1em;
     margin-top: 1em;
-    width: 90%;
+    width: 95%;
+    border-radius: 1em;
+    border-color: black;
+    border-style: solid;
     background-color: white;
     padding: 0.5em;
   }
@@ -426,7 +441,11 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 1em;
+    margin-bottom: 1em;
     width: 60%;
+    border-radius: 1em;
+    border-color: black;
+    border-style: solid;
     background-color: white;
     padding: 0.5em;
   }
@@ -458,9 +477,13 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 1em;
     margin-bottom: 1em;
     margin-top: 1em;
     width: 50%;
+    border-radius: 1em;
+    border-color: black;
+    border-style: solid;
     background-color: white;
     padding: 0.5em;
   }

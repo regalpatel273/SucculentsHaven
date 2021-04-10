@@ -1,21 +1,24 @@
 $(document).ready(function () {
     $("#atcbutton").focus();
+    var click = 0;
     $("#atcbutton").click(function(){
-        sessionStorage.setItem("num",prompt("Enter number of items:"));
-        var num = sessionStorage.getItem("num");
-        while(isNaN(num)){
-            alert("Please enter number of items");
-            sessionStorage.setItem("num",prompt("Enter number of items:"));
-            var num = sessionStorage.getItem("num");
+        if (click == 0) {
+            var num = $(this).siblings(".num").children().val();
+            if(num == "" || num === 0){
+                alert("Number of items cannot be zero");
+            } else{
+                $("#cartname").next().text(" "+$("#plantname").text());
+                $("#cartprice").next().text(" $ "+parseFloat($("#price").text().split(" ")[1]));
+                $("#cartitems").next().text(" "+sessionStorage.getItem("num"));
+                var totalprice = parseFloat($("#price").text().split(" ")[1])*parseFloat(sessionStorage.getItem("num"));
+                $(".carttotal").next().text(" $ "+totalprice.toFixed(2));
+                click += 1;
+            }
         }
-        if(!isNaN(num)){
-            alert("Go to cart to make payment");
+        else{
+            alert("Items already in the cart");
         }
-        $("#cartname").next().text(" "+$("#plantname").text());
-        $("#cartprice").next().text(" $ "+parseFloat($("#price").text().split(" ")[1]));
-        $("#cartitems").next().text(" "+sessionStorage.getItem("num"));
-        var totalprice = parseFloat($("#price").text().split(" ")[1])*parseFloat(sessionStorage.getItem("num"));
-        $(".carttotal").next().text(" $ "+totalprice);
+        
     });
     $("#cartimg").click(function(){
         $("#container").toggle(500);

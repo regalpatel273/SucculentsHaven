@@ -25,14 +25,11 @@ main {
   h3 {
     padding-left: 0.5em;
   }
-  section button {
+  #container button {
     background-color: #34a987;
     color: white;
     border: none;
-    padding: 5px;
-    display: inline;
-    float: right;
-    margin-right: 1em;
+    padding: 0.5em;
     margin-bottom: 1em;
   }
   .cart {
@@ -81,8 +78,8 @@ main {
     width: 150px;
     padding-left: 0.5em;
   }
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
+  #cardnum::-webkit-outer-spin-button,
+  #cardnum::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -124,19 +121,11 @@ main {
     height: auto;
     width: 300px;
   }
-  #atcsec {
-    display: inline;
-    float: right;
-    margin-right: 1em;
-    margin-bottom: 1em;
-  }
-  #atcsec button {
+  #container button {
     background-color: #34a987;
     color: white;
     border: none;
-    padding: 5px;
-    display: block;
-    margin-right: 1em;
+    padding: 0.5em;
     margin-bottom: 1em;
   }
   .cart {
@@ -185,8 +174,8 @@ main {
     width: 150px;
     padding-left: 0.5em;
   }
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
+  #cardnum::-webkit-outer-spin-button,
+  #cardnum::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
@@ -225,16 +214,10 @@ main {
   }
   #container button {
     background-color: #34a987;
-    width: 100px;
-    border: none;
     color: white;
-    cursor: pointer;
-    padding: 5px;
-    display: inline;
-    float: right;
-    margin-right: 1em;
+    border: none;
+    padding: 0.5em;
     margin-bottom: 1em;
-    margin-left: 0.5em;
   }
   .cart {
     display: block;
@@ -282,8 +265,8 @@ main {
     width: 250px;
     padding-left: 0.5em;
   }
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button {
+  #cardnum::-webkit-outer-spin-button,
+  #cardnum::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }

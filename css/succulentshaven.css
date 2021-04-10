@@ -134,7 +134,8 @@ nav {
 }
 
 .shopbag {
-  display: none;
+  display: flex;
+  width: 20%;
 }
 
 /* Style for the body */

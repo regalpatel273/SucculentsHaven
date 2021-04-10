@@ -34,7 +34,8 @@ $(document).ready(function(){
     var cartprice = 0;
     var cartitems = 0;
     var carttotal = 0;
-    var totalamount = 0;
+    var totalamount = parseFloat(0);
+    var cart = [];
     $("section").find("button").click(function(){
         divid += 1;
         tcart += 1;
@@ -42,10 +43,17 @@ $(document).ready(function(){
         cartprice += 1;
         cartitems += 1;
         carttotal += 1;
+        var itempresent = false;
+        for(var i = 0; i < cart.length; i++){
+            if($(this).siblings("h3").text() == cart[i]){
+                itempresent = true;
+            }
+        }
         var num = $(this).siblings(".num").children().val();
         if(num == "" || num === 0){
             alert("Number of items cannot be zero");
-        } else{
+        } else if(!itempresent){
+            cart.push($(this).siblings("h3").text());
             var totalprice = parseFloat($(this).siblings(".price").text().split(" ")[1]) * num;    
             var content =  `<div id="divid${divid}" style="clear: left; width: auto;">
                                 <section class="cartimg" style="display: inline-block; width: auto;">
@@ -55,29 +63,33 @@ $(document).ready(function(){
                                     <label id="cartname${cartname}">Name:</label><span> ${$(this).siblings("h3").text()}</span><br>
                                     <label id="cartprice${cartprice}">Price:</label><span> ${$(this).siblings(".price").text()}</span><br>
                                     <label id="cartitems${cartitems}">Number of items:</label><span> ${num}</span><br>
-                                    <label id="carttotal${carttotal}">Total Price:</label><span> $ ${totalprice}</span><br>
+                                    <label id="carttotal${carttotal}">Total Price:</label><span> $ ${totalprice.toFixed(2)}</span><br>
                                 </section>
                             </div>`;
             $("#divid0").find("h3").remove();
             $(content).appendTo($(".cart").find("#divid0"));
             totalamount += totalprice;
-            $(".carttotalamount").next().text(" $ "+totalamount);
-        }        
+        } else{
+            alert("Item already added to cart");
+        }   
+        $(".carttotalamount").children().text(" $ "+totalamount.toFixed(2));
     });
 
 
     $("#cartimg").click(function(){
         $("#indoor").toggle(500);
+        $("#category").toggle(500);
         $("#outdoor").fadeOut();
         $(".cart").fadeIn(500);
+        $(".pay").fadeOut(500);
         $("#makepayment").focus();
     });
     $("#makepayment").click(function(){
         if(totalamount === 0){
             alert("cart empty");
         } else{
-            $(".cart").fadeOut(500);
-            $(".pay").fadeIn(500);
+            $(".cart").toggle(500);
+            $(".pay").toggle(500);
             $("#confirmpayment").focus();
         }   
     });
@@ -110,7 +122,7 @@ $(document).ready(function(){
         }
 
         if(phnnum == "") { 
-            $("#phnnum").next().text("MRequired");
+            $("#phnnum").next().text("Required");
             isValid = false;
         } else {
             $("#phnnum").next().text("");
