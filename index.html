@@ -10,9 +10,21 @@
     <link rel="stylesheet" href="./css/succulentshavenhome.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;500;700&display=swap">
     <link rel="icon" href="./images/home/succulents-haven-icon.png" type="image/gif" sizes="16x16">
-    <script src="" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#slider').bxSlider({
+                minSlider: 3,
+                maxSlider: 3,
+                slideWidth: 400,
+                slideMargin: 10
+            });
+        });
+    </script>
     
-    <script src="succulent1.js"></script>
+
 
 </head>
 <body>
@@ -64,6 +76,7 @@
             <div class="feat-hdr center-items">
                 <h1>Featured Products</h1>
             </div>
+            <ul id="slider"><li>
             <div class="feat-succulent">
                 <div class="featrow">
                     <div class="feat-img">
@@ -86,6 +99,53 @@
                     </div>
                 </div>
             </div>
+            </li> <li>
+            <div class="feat-succulent">
+                <div class="featrow">
+                    <div class="feat-img">
+                        <img src="./images/home/featured-5.png" alt="Featured Image 1">
+                        <div class="center-items">Lady Finger Cactus</div>
+                    </div>
+                    <div class="feat-img">
+                        <img src="./images/home/featured-6.png" alt="Featured Image 2">
+                        <div class="center-items">Lace Aloe</div>
+                    </div>
+                </div>
+                <div class="featrow">
+                    <div class="feat-img">
+                        <img src="./images/home/featured-7.png" alt="Featured Image 3">
+                        <div class="center-items">Aloe 'Twilight Zone'</div>
+                    </div>
+                    <div class="feat-img">
+                        <img src="./images/home/featured-8.png" alt="Featured Image 4">
+                        <div class="center-items">Golden Ball Cactus</div>
+                    </div>
+                </div>
+            </div>
+            </li> <li>
+            <div class="feat-succulent">
+                <div class="featrow">
+                    <div class="feat-img">
+                        <img src="./images/home/featured-9.png" alt="Featured Image 1">
+                        <div class="center-items">Lady Finger Cactus</div>
+                    </div>
+                    <div class="feat-img">
+                        <img src="./images/home/featured-10.png" alt="Featured Image 2">
+                        <div class="center-items">Lace Aloe</div>
+                    </div>
+                </div>
+                <div class="featrow">
+                    <div class="feat-img">
+                        <img src="./images/home/featured-11.png" alt="Featured Image 3">
+                        <div class="center-items">Aloe 'Twilight Zone'</div>
+                    </div>
+                    <div class="feat-img">
+                        <img src="./images/home/featured-12.png" alt="Featured Image 4">
+                        <div class="center-items">Golden Ball Cactus</div>
+                    </div>
+                </div>
+            </div> </li>
+            </ul> 
         </section>
 
         <section id="bestdeal">
