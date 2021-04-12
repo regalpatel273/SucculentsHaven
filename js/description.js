@@ -9,8 +9,8 @@ $(document).ready(function () {
             } else{
                 $("#cartname").next().text(" "+$("#plantname").text());
                 $("#cartprice").next().text(" $ "+parseFloat($("#price").text().split(" ")[1]));
-                $("#cartitems").next().text(" "+sessionStorage.getItem("num"));
-                var totalprice = parseFloat($("#price").text().split(" ")[1])*parseFloat(sessionStorage.getItem("num"));
+                $("#cartitems").next().text(" "+num);
+                var totalprice = parseFloat($("#price").text().split(" ")[1])*parseFloat(num);
                 $(".carttotal").next().text(" $ "+totalprice.toFixed(2));
                 click += 1;
             }
